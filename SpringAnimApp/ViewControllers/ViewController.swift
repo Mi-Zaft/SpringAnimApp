@@ -23,13 +23,13 @@ final class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        startAnimation(animation: nextAnimation)
+        setupUI(animation: nextAnimation)
     }
 
     @IBAction func runButtonDidTapped(_ sender: UIButton) {
         startAnimation(animation: nextAnimation)
         
-        sender.setTitle(nextAnimation.preset, for: .normal)
+        sender.setTitle("Run \(nextAnimation.preset)", for: .normal)
     }
 }
 
